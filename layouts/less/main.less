@@ -32,12 +32,6 @@ a:active { color: #1d74f2; }
 ul { margin-bottom: 20px; list-style-position:inside; }
 ol { margin-bottom: 20px; list-style-position:inside; }
 ul ul, ol ol { margin-bottom:0; }
-
-blockquote { margin: 10px 10px 20px; padding: 9px; background-color: #f8f8f8; color: #666; border-left: 5px solid #ddd; font: 14px/20px Georgia, Times, serif; quotes: "\201C" "\201D"; }
-blockquote p { margin: 0; }
-blockquote:before { content: open-quote; font-weight: bold; }
-blockquote:after  { content: close-quote; font-weight: bold; }
-
 ul ul, ol ol {
   margin-left: 30px;
 }
@@ -45,6 +39,21 @@ ul ul, ol ol {
 ul li, ol li {
   list-style-position: outside;
   margin-left: 1em;
+}
+
+blockquote {
+  margin: 10px 10px 20px;
+  padding: 9px;
+  background-color: #f8f8f8;
+  color: #666;
+  border-left: 5px solid #ddd;
+  font: 14px/20px Georgia, Times, serif;
+  quotes: "\201C" "\201D";
+  
+  p { margin: 0; }
+  &:before { content: none; font-weight: bold; }
+  &:after  { content: none; font-weight: bold; }
+  &:last-child { margin-bottom: 0px; }
 }
 
 a.no-decoration, a.no-decoration:hover,
@@ -66,6 +75,17 @@ pre {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  
+  &.example-code {
+    font-size: 18px;
+    margin-bottom: 0px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+
+    &.big {
+      font-size: 22px;
+    }
+  }
 }
 
 code {
@@ -73,15 +93,6 @@ code {
   padding: 0px;
   overflow-wrap: break-word;
   word-break: break-all;
-}
-pre.example-code {
-  font-size: 18px;
-  margin-bottom: 0px;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-pre.example-code.big {
-  font-size: 22px;
 }
 
 header, footer {
@@ -99,11 +110,11 @@ header {
 /* Header */
 .header-section {
   padding: 2rem 0;
-}
 
-.header-section.right {
-  padding-top: 10px;
-  margin-left: 10px;
+  &.right {
+    padding-top: 10px;
+    margin-left: 10px;
+  }
 }
 
 .header-title {
@@ -117,17 +128,16 @@ header {
   letter-spacing: normal;
   line-height: 46px;
   color: #000000;
-  
-}
+ 
+  a {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
 
-.header-title a {
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.header-title a:hover {
-  color: #357edd;
+    &:hover {
+      color: #357edd;      
+    }
+  }
 }
 
 #logo {
@@ -161,12 +171,12 @@ footer {
 
 .copyright {
   padding-top: 1.5rem;
-}
 
-.copyright a {
-  color: #357edd;  
-  cursor: pointer;
-  text-decoration: underline;
+  a {
+    color: #357edd;  
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 /* Nav-links */
@@ -179,12 +189,13 @@ footer {
   color: #5A626E;
   cursor: pointer;
   margin-left: 20px;
-}
-.nav-link:hover {
-  color: #357edd;
-}
-.nav-link:first-child {
-  margin-left: 0;
+
+  &:hover {
+    color: #357edd;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 /* Body */
@@ -231,21 +242,22 @@ footer {
   padding: 1px;
   font-weight: bolder;
   font-size: 15px;
+
+  code {
+    background: none;
+  }
+
+  &.c-0 {
+    margin-left: 0px;
+  }
+  &.c-1 {
+    margin-left: 25px;
+  }
+  &.c-2 {
+    margin-left: 50px;
+  }
 }
 
-.label code {
-  background: none;
-}
-
-.label.c-0 {
-  margin-left: 0px;
-}
-.label.c-1 {
-  margin-left: 25px;
-}
-.label.c-2 {
-  margin-left: 50px;
-}
 
 .example {
   font-size: 15px;
@@ -274,10 +286,6 @@ hr {
 .mfc-multistream { color: #1e8c99; }
 .mfc-multigram { color: #167f71; }
 .mfc-multikey { color: #a81919; }
-
-blockquote:before { content: none; }
-blockquote:after  { content: none; }
-blockquote :last-child { margin-bottom: 0px; }
 
 .project-list li {
   margin: 10px 1em;
