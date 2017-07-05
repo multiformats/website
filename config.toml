@@ -3,3 +3,6 @@ description = "A collection of protocols for future-proofing systems, today."
 languageCode = "en-us"
 relativeURLs = true
 sourceRelativeLinksEval = true
+
+[params]
+  specifications = "https://github.com/multiformats/specs"
