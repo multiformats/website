@@ -16,6 +16,11 @@ This project builds out a static site to explain Multiformats, ready for deploym
 ```sh
 git clone https://github.com/multiformats/website
 ```
+
+## Usage
+
+To deploy the site multiformats.io, run:
+
 ```sh
 # Build out the optimised site to ./public, where you can check it locally.
 make
@@ -26,7 +31,7 @@ make deploy
 # Save your dnsimple api token as auth.token
 cat "<api token here>" > auth.token
 
-# Update the dns record for libp2p to point to the new ipfs hash.
+# Update the dns record for multiformats.io to point to the new ipfs hash.
 make publish-to-domain
 ```
 
