@@ -18,7 +18,7 @@ build: install lint css
 	echo "Site built out to ./public dir"
 
 help:
-	@echo 'Makefile for a filecoin.io, a hugo built static site.                                                          '
+	@echo 'Makefile for a multiformats.io, a hugo built static site.                                                          '
 	@echo '                                                                                                          '
 	@echo 'Usage:                                                                                                    '
 	@echo '   make                                Build the optimised site to ./$(OUTPUTDIR)                         '
@@ -38,7 +38,7 @@ clean:
 	[ ! -d static/css ] || rm -rf static/css/*.css
 
 node_modules:
-	$(PREPEND)$(NPM) i $(APPEND)
+	$(PREPEND)npm i $(APPEND)
 
 install: node_modules
 	$(PREPEND)[ -d static/css ] || mkdir -p static/css

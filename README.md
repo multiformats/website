@@ -5,7 +5,7 @@
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](https://webchat.freenode.net/?channels=%23ipfs)
 [![](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-> Official website for Multiformates http://multiformats.io
+> Official website for Multiformats http://multiformats.io
 
 This repository contains the source code for the Multiformats website available at http://multiformats.io
 
@@ -115,6 +115,7 @@ git clone https://github.com/multiformats/website
 ## Dependencies
 
 * `hugo` to build website
+* `Node.js` and `npm` for build tools
 * `ipfs` to deploy changes
 * `dnslink-deploy` to deploy changes
 
