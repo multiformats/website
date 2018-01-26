@@ -3,7 +3,7 @@ title = "Multiformats"
 stars = "multiformats/multiformats"
 +++
 
-> ## Self-describing values for Future-proofing and taking over the world
+> ## Self-describing values for Future-proofing and taking over the world, one multiformat at a time
 
 Every choice in computing has a tradeoff. This includes formats, algorithms, encodings, and so on. And even with a great deal of planning, decisions may lead to breaking changes down the road, or to solutions which are no longer optimal. Allowing systems to evolve and grow is important.
 
