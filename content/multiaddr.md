@@ -33,7 +33,7 @@ Instead, when addresses are fully qualified, we can build applications that will
 ```
 /ip4/127.0.0.1/udp/9090/quic
 /ip6/::1/tcp/3217
-/ip4/127.0.0.1/tcp/90/http/baz.jpg
+/ip4/127.0.0.1/tcp/80/http/baz.jpg
 /dns4/foo.com/tcp/80/http/bar/baz.jpg
 /dns6/foo.com/tcp/443/https
 ```
