@@ -67,6 +67,11 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 		- a modular network library for peer-to-peer protocols.
 	</li>
 	<li>
+		<a href="https://github.com/ipld/ipld">
+		<img height="64px" src="https://ipld.io/img/ipld-logo.png" />IPLD</a>
+		- a set of standards and implementations for creating decentralized data-structures that are universally addressable and linkable.
+	</li>
+	<li>
 		<small><a href="https://github.com/multiformats/website/blob/master/content/index.md">(add yours here)</a></small>
 	</li>
 </ul>
