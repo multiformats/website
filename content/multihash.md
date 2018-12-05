@@ -131,6 +131,8 @@ The multihash examples are chosen to show different hash functions and different
   multihash="132052eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4"
 %}}
 
+Note: this is the actual SHA-512 (as per code `0x13`) truncated to 256 bits; some libraries support an hash called SHA-512/256 that has the same 256 bit length but with a different initialization vector (as defined in [FIPS 180-4](https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=910977)).
+
 ### sha2-512 - 512 bits (aka sha512)
 
 {{% multihash
