@@ -41,7 +41,7 @@ When using Multihash, a system warns the consumers of its hash values that these
 
 A multihash follows the `TLV` (type-length-value) pattern.
 
-- the _type_ <code class="c-0">\<hash-func-type></code> is an [unsigned variable integer](https://github.com/multiformats/unsigned-varint) identifying the hash function. There is a default table, and it is configurable. The default table is [the multihash table](https://github.com/multiformats/multihash/blob/master/hashtable.csv).
+- the _type_ <code class="c-0">\<hash-func-type></code> is an [unsigned variable integer](https://github.com/multiformats/unsigned-varint) identifying the hash function. There is a default table, and it is configurable. The default table is [the multicodec table](https://github.com/multiformats/multicodec/blob/master/table.csv).
 - the _length_ <code class="c-1">\<digest-length></code> is an [unsigned variable integer](https://github.com/multiformats/unsigned-varint) counting the length of the digest, in bytes
 - the _value_ <code class="c-2">\<digest-value></code> is the hash function digest, with a length of exactly <code class="c-1">\<digest-length></code> bytes.
 
