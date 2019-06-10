@@ -1,3 +1,4 @@
+DOMAIN="multiformats.io"
 IPFSLOCAL="http://localhost:8080/ipfs/"
 IPFSGATEWAY="https://ipfs.io/ipfs/"
 OUTPUTDIR=public
@@ -11,10 +12,33 @@ else
 	APPEND=1>/dev/null
 endif
 
+# Where Hugo should be installed locally
+HUGO_LOCAL=./bin/hugo
+# Path to Hugo binary to use when building the site
+HUGO_BINARY=$(HUGO_LOCAL)
+HUGO_VERSION=0.28
+PLATFORM:=$(shell uname)
+ifeq ('$(PLATFORM)', 'Darwin')
+	PLATFORM=macOS
+endif
+MACH:=$(shell uname -m)
+ifeq ('$(MACH)', 'x86_64')
+	MACH=64bit
+else
+	MACH=32bit
+endif
+HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_$(PLATFORM)-$(MACH).tar.gz"
+
 build: install lint css
-	$(PREPEND)hugo && \
+	$(PREPEND)$(HUGO_BINARY) && \
 	echo "" && \
-	echo "Site built out to ./public dir"
+	echo "Site built out to ./$(OUTPUTDIR) dir"
+bin/hugo:
+	@echo "Installing Hugo to $(HUGO_LOCAL)..."
+	$(PREPEND)mkdir -p tmp_hugo $(APPEND)
+	$(PREPEND)mkdir -p bin $(APPEND)
+	$(PREPEND)curl --location "$(HUGO_URL)" | tar -xzf - -C tmp_hugo && chmod +x tmp_hugo/hugo && mv tmp_hugo/hugo $(HUGO_LOCAL) $(APPEND)
+	$(PREPEND)rm -rf tmp_hugo $(APPEND)
 
 help:
 	@echo 'Makefile for a multiformats.io, a hugo built static site.                                                          '
@@ -38,7 +62,7 @@ clean:
 node_modules:
 	$(PREPEND)npm i $(APPEND)
 
-install: node_modules
+install: bin/hugo node_modules
 	$(PREPEND)[ -d static/css ] || mkdir -p static/css
 
 lint: install
@@ -48,12 +72,12 @@ css: install
 	$(PREPEND)$(NPMBIN)/lessc --clean-css --autoprefix layouts/less/main.less static/css/main.css $(APPEND)
 
 serve: install lint css
-	$(PREPEND)hugo server
+	$(PREPEND)$(HUGO_BINARY) server
 
 dev: install css
 	$(PREPEND)( \
 		$(NPMBIN)/nodemon --watch layouts/css --exec "$(NPMBIN)/lessc --clean-css --autoprefix layouts/less/main.less static/css/main.css" & \
-		hugo server -w \
+		$(HUGO_BINARY) server -w \
 	)
 
 deploy:
