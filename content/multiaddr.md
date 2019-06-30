@@ -112,15 +112,15 @@ We will be submitting an RFC to the IETF. It will be worked on [at the multiaddr
 
 ### Credits
 
-The Multiaddr format was invented by [@jbenet](https://github.com/jbenet), and refined by the [IPFS Team](https://github.com/ipfs). It is now maintained by the Multiformats community. The Multihash implementations are written by a variety of authors, whose hard work has made future-proofing and upgrading hash functions much easier. Thank you!
+The Multiaddr format was invented by [@jbenet](https://github.com/jbenet), and refined by the [IPFS Team](https://github.com/ipfs). It is now maintained by the Multiformats community. The Multiaddr implementations are written by a variety of authors, whose hard work has made future-proofing and upgrading hash functions much easier. Thank you!
 
 ### Open Source
 
-The Multihash format (this documentation and the specification) is Open Source software, licensed under the MIT License and patent-free. The multihash implementations listed here are also Open Source software. Please contribute to make them great! Your bug reports, new features, and documentation improvements will benefit everyone.
+The Multiaddr format (this documentation and the specification) is Open Source software, licensed under the MIT License and patent-free. The multiaddr implementations listed here are also Open Source software. Please contribute to make them great! Your bug reports, new features, and documentation improvements will benefit everyone.
 
 ### Part of the Multiformats Project
 
-Multihash is part of [the Multiformats Project](../), a collection of protocols which aim to future-proof systems, today. [Check out the other multiformats](../#multiformat-protocols). It is also maintained and sponsored by [Protocol Labs](http://ipn.io).
+Multiaddr is part of [the Multiformats Project](../), a collection of protocols which aim to future-proof systems, today. [Check out the other multiformats](../#multiformat-protocols). It is also maintained and sponsored by [Protocol Labs](http://ipn.io).
 
 <div class="about-logos">
 <a href="../" class="no-decoration">
