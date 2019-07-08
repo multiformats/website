@@ -49,7 +49,7 @@ A multiaddr value is a _recursive_ `(TLV)+` (type-length-value repeating) encodi
 
 - path notation nests protocols and addresses, for example: `/ip4/127.0.0.1/udp/4023/quic` (this is the repeating part).
   - a protocol MAY be only a code, or also have an address value (nested under a `/`) (eg. `/quic` and `/ip4/127.0.0.1`)
-- the _type_ <code class="c-0">\<addr-protocol-str-code></code> is a string code identifying the network protocol. The table of protocols is configurable. The default table is the [multicodec](./multicodec) table.
+- the _type_ <code class="c-0">\<addr-protocol-str-code></code> is a string code identifying the network protocol. The table of protocols is configurable. The default table is the [multicodec](https://github.com/multiformats/multicodec) table.
 - the _value_ <code class="c-1">\<addr-value></code> is the network address value, in natural string form.
 
 Human-readable encoding (psuedo regex)
