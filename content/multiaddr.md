@@ -94,6 +94,7 @@ These implementations are available:
 - [cs-multiaddress](https://github.com/tabrath/cs-multiaddress) - alpha
 - [erlang-multiaddr](https://github.com/helium/erlang-multiaddr) - alpha
 - [net-ipfs-core](https://github.com/richardschneider/net-ipfs-core) - stable
+- [swift-multiaddr](https://github.com/lukereichold/swift-multiaddr) - stable
 - [(add yours here)](https://github.com/multiformats/website/blob/master/content/multiaddr.md)
 
 ## Examples
