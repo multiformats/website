@@ -63,7 +63,7 @@ Human-readable encoding (psuedo regex)
 
 ### The binary-packed version:
 
-- the _type_ <code class="c-0">\<addr-protocol-code></code> is a variable integer identifying the network protocol. The table of protocols is configurable. The default table is the [multicodec](./multicodec) table.
+- the _type_ <code class="c-0">\<addr-protocol-code></code> is a variable integer identifying the network protocol. The table of protocols is configurable. The default table is the [multicodec](https://github.com/multiformats/multicodec) table.
 - the _length_ is an [unsigned variable integer](https://github.com/multiformats/unsigned-varint) counting the length of the address value, in bytes.
   - **The _length_ is omitted by protocols who have an exact address value size, or no address value.**
 - the _value_ <code class="c-1">\<addr-value></code> is the network address value, of length `L`.
