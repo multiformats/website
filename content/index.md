@@ -26,7 +26,7 @@ The self-describing aspects of the protocols have a few stipulations:
 
 ## Multiformat protocols
 
-Currently, we have the following multiformat protocols:
+Currently, the following multiformat protocols exist:
 
 - [multihash](./multihash) - self-describing <span class="mfc mfc-multihash">hashes</span>
 - [multiaddr](./multiaddr)  <small>(WIP)</small> - self-describing <span class="mfc mfc-multiaddr">network addresses</span>
