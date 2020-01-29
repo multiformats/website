@@ -45,7 +45,7 @@ Each of the projects has its list of implementations in various languages.
 
 Several of the multiformats have stable specs and stable implementations. We're are working on the others. We prioritize their usage as soon as possible, as what they offer -- protocol interoperability and future-proofing -- has real-world consequences today.
 
-Towards that end, we are encouraging improvements to WIP protocols, and implementations of all. Please contribute to the projects on Github.
+Towards that end, we are encouraging improvements to WIP protocols, and implementations of all. Please contribute to the projects on GitHub.
 
 
 ### A note on the word Multiformats
@@ -78,7 +78,7 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 
 ## Contribute & Community
 
-<a href="/">The Multiformats Project</a> is an Open Source software project. It is built by a large community of contributors. Please join us on Github or IRC to request features, file bugs, contribute code, improve documentation, and ask questions. We have a very open and welcoming community.
+<a href="/">The Multiformats Project</a> is an Open Source software project. It is built by a large community of contributors. Please join us on GitHub or IRC to request features, file bugs, contribute code, improve documentation, and ask questions. We have a very open and welcoming community.
 
 - [Github Project](https://github.com/multiformats/multiformats)
 - [Website Repository](https://github.com/multiformats/website)
