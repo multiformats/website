@@ -26,13 +26,13 @@ The self-describing aspects of the protocols have a few stipulations:
 
 ## Multiformat protocols
 
-Currently, we have the following multiformat protocols:
+Currently, the following multiformat protocols exist:
 
 - [multihash](./multihash) - self-describing <span class="mfc mfc-multihash">hashes</span>
-- [multiaddr](./multiaddr) - self-describing <span class="mfc mfc-multiaddr">network addresses</span>
-- [multibase](https://github.com/multiformats/multibase) - self-describing <span class="mfc mfc-multibase">base encodings</span>
+- [multiaddr](./multiaddr)  <small>(WIP)</small> - self-describing <span class="mfc mfc-multiaddr">network addresses</span>
+- [multibase](https://github.com/multiformats/multibase)  <small>(WIP)</small> - self-describing <span class="mfc mfc-multibase">base encodings</span>
 - [multicodec](https://github.com/multiformats/multicodec) - self-describing <span class="mfc mfc-multicodec">serialization</span>
-- [multistream](https://github.com/multiformats/multistream) - self-describing <span class="mfc mfc-multistream">stream network protocols</span>
+- [multistream](https://github.com/multiformats/multistream) <small>(DEPRECATED)</small> - self-describing <span class="mfc mfc-multistream">stream network protocols</span>
 - [multigram](https://github.com/multiformats/multigram) <small>(WIP)</small> - self-describing <span class="mfc mfc-multigram">packet network protocols</span>
 
 <!--
@@ -70,6 +70,11 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 		<a href="https://github.com/ipld/ipld">
 		<img height="64px" src="https://ipld.io/img/ipld-logo.png" />IPLD</a>
 		- a set of standards and implementations for creating decentralized data-structures that are universally addressable and linkable.
+	</li>
+	<li>
+		<a href="https://github.com/libra/libra">
+		<img height="64px" src="https://github.com/libra/libra/raw/master/.assets/libra.png" />Libra</a>
+		- Libra’s mission is to enable a simple global currency and financial infrastructure that empowers billions of people.
 	</li>
 	<li>
 		<small><a href="https://github.com/multiformats/website/blob/master/content/index.md">(add yours here)</a></small>
