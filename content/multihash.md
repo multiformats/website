@@ -103,6 +103,7 @@ The multihash examples are chosen to show different hash functions and different
 {{% multihash
   fnName="sha1"
   fnCode="11"
+  fnCodeVarint="11"
   length="20"
   lengthCode="14"
   digest="8a173fd3e32c0fa78b90fe42d305f202244e2739"
@@ -114,6 +115,7 @@ The multihash examples are chosen to show different hash functions and different
 {{% multihash
   fnName="sha2-256"
   fnCode="12"
+  fnCodeVarint="12"
   length="32"
   lengthCode="20"
   digest="41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8"
@@ -125,6 +127,7 @@ The multihash examples are chosen to show different hash functions and different
 {{% multihash
   fnName="sha2-512"
   fnCode="13"
+  fnCodeVarint="13"
   length="32"
   lengthCode="20"
   digest="52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4"
@@ -138,6 +141,7 @@ Note: this is the actual SHA-512 (as per code `0x13`) truncated to 256 bits; som
 {{% multihash
   fnName="sha2-512"
   fnCode="13"
+  fnCodeVarint="13"
   length="64"
   lengthCode="40"
   digest="52eb4dd19f1ec522859e12d89706156570f8fbab1824870bc6f8c7d235eef5f4c2cbbafd365f96fb12b1d98a0334870c2ce90355da25e6a1108a6e17c4aaebb0"
@@ -149,6 +153,7 @@ Note: this is the actual SHA-512 (as per code `0x13`) truncated to 256 bits; som
 {{% multihash
   fnName="blake2b-512"
   fnCode="b240"
+  fnCodeVarint="c0e402"
   length="64"
   lengthCode="40"
   digest="d91ae0cb0e48022053ab0f8f0dc78d28593d0f1c13ae39c9b169c136a779f21a0496337b6f776a73c1742805c1cc15e792ddb3c92ee1fe300389456ef3dc97e2"
@@ -160,6 +165,7 @@ Note: this is the actual SHA-512 (as per code `0x13`) truncated to 256 bits; som
 {{% multihash
   fnName="blake2b-256"
   fnCode="b220"
+  fnCodeVarint="a0e402"
   length="32"
   lengthCode="20"
   digest="7d0a1371550f3306532ff44520b649f8be05b72674e46fc24468ff74323ab030"
@@ -171,6 +177,7 @@ Note: this is the actual SHA-512 (as per code `0x13`) truncated to 256 bits; som
 {{% multihash
   fnName="blake2s-256"
   fnCode="b260"
+  fnCodeVarint="e0e402"
   length="32"
   lengthCode="20"
   digest="a96953281f3fd944a3206219fad61a40b992611b7580f1fa091935db3f7ca13d"
@@ -182,6 +189,7 @@ Note: this is the actual SHA-512 (as per code `0x13`) truncated to 256 bits; som
 {{% multihash
   fnName="blake2s-128"
   fnCode="b250"
+  fnCodeVarint="d0e402"
   length="16"
   lengthCode="10"
   digest="0a4ec6f1629e49262d7093e2f82a3278"
