@@ -56,6 +56,7 @@ For example:
 {{% multihash
   fnName="sha2-256"
   fnCode="12"
+  fnCodeVarint="12"
   length="32"
   lengthCode="20"
   digest="41dd7b6443542e75701aa98a0c235951a28a0d851b11564d20022ab11d2589a8"
