@@ -75,7 +75,6 @@ These implementations are available:
   - [by @dignifiedquire](//github.com/dignifiedquire/rust-multihash)
   - [by @google](//github.com/google/rust-multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
-- [python-multihash](//github.com/tehmaze/python-multihash)
 - [elixir-multihash](//github.com/zabirauf/ex_multihash), [elixir-multihashing](//github.com/candeira/ex_multihashing)
 - [swift-multihash](//github.com/NeoTeo/SwiftMultihash)
 - [ruby-multihash](//github.com/neocities/ruby-multihash)
