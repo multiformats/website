@@ -72,11 +72,6 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 		- a set of standards and implementations for creating decentralized data-structures that are universally addressable and linkable.
 	</li>
 	<li>
-		<a href="https://github.com/libra/libra">
-		<img height="64px" src="https://github.com/libra/libra/raw/master/.assets/libra.png" />Libra</a>
-		- Libra’s mission is to enable a simple global currency and financial infrastructure that empowers billions of people.
-	</li>
-	<li>
 		<a href="https://github.com/NamChain-Open-Initiative-Research-Lab/NamChain">
 		<img height="64px" src="https://1.bp.blogspot.com/-0SArWfduw68/XkxV8EmBBcI/AAAAAAAAABw/h9aWSWbm0J4kilgn3xddzQ3PdoP-e3RZgCLcBGAsYHQ/s1600/SAVE_20200127_132431.jpg" />நம்Chain</a>
 		- நம்Chain’s mission is to build a socio-blockchain with highly modular, secure and quantum support architecture. 
