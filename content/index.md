@@ -26,20 +26,23 @@ The self-describing aspects of the protocols have a few stipulations:
 
 ## Multiformat protocols
 
-Currently, the following multiformat protocols exist:
+The Multiformats Project describes a series of protocols. Currently, the following protocols exist:
 
-- [multihash](./multihash) - self-describing <span class="mfc mfc-multihash">hashes</span>
 - [multiaddr](./multiaddr)  <small>(WIP)</small> - self-describing <span class="mfc mfc-multiaddr">network addresses</span>
 - [multibase](https://github.com/multiformats/multibase)  <small>(WIP)</small> - self-describing <span class="mfc mfc-multibase">base encodings</span>
 - [multicodec](https://github.com/multiformats/multicodec) - self-describing <span class="mfc mfc-multicodec">serialization</span>
-- [multistream](https://github.com/multiformats/multistream) <small>(DEPRECATED)</small> - self-describing <span class="mfc mfc-multistream">stream network protocols</span>
-- [multigram](https://github.com/multiformats/multigram) <small>(WIP)</small> - self-describing <span class="mfc mfc-multigram">packet network protocols</span>
+- [multihash](./multihash) - self-describing <span class="mfc mfc-multihash">hashes</span>
 
 <!--
 - [multikey](https://github.com/ipfs/specs/issues/58) <small>(WIP)</small> - self-describing <span class="mfc mfc-multikey">keys and proofs</span>
  -->
 
 Each of the projects has its list of implementations in various languages.
+
+Also, some protocols are deprecated or frozen:
+
+- [multigram](https://github.com/multiformats/multigram) <small>(FROZEN)</small> - self-describing <span class="mfc mfc-multigram">packet network protocols</span>
+- [multistream](https://github.com/multiformats/multistream) <small>(DEPRECATED)</small> - self-describing <span class="mfc mfc-multistream">stream network protocols</span>
 
 ### Project Status
 
@@ -58,7 +61,8 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 
 <ul class="project-list">
 	<li>
-		<a href="https://ipfs.io"><img src="projects/ipfs.png" />IPFS</a>
+		<a href="https://ipfs.io">
+		<img src="projects/ipfs.png" />IPFS</a>
 		- a peer-to-peer hypermedia protocol and distributed file system.
 	</li>
 	<li>
