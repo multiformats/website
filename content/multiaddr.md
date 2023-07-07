@@ -4,8 +4,6 @@ multiformat = "multiaddr"
 stars = "multiformats/multiaddr"
 +++
 
-⚠️️ _(Note: this page is a work in progress; [please improve it here](https://github.com/multiformats/website/blob/master/content/multiaddr.md))_ ⚠️️
-
 > ## Self-describing network addresses
 
 Multiaddr is a format for encoding addresses from various well-established network protocols. It is useful to write applications that future-proof their use of addresses, and allow multiple transport protocols and addresses to coexist.
