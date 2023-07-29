@@ -14,7 +14,7 @@ This project builds out a static site to explain Multiformats, ready for deploym
 ## Install
 
 ```sh
-git clone https://github.com/multiformats/website
+git clone https://github.com/multiformats/website.git
 ```
 
 ## Usage

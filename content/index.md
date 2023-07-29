@@ -2,7 +2,6 @@
 title = "Multiformats"
 stars = "multiformats/multiformats"
 +++
-
 > ## Self-describing values for Future-proofing
 
 Every choice in computing has a tradeoff. This includes formats, algorithms, encodings, and so on. And even with a great deal of planning, decisions may lead to breaking changes down the road, or to solutions which are no longer optimal. Allowing systems to evolve and grow is important.
@@ -10,7 +9,7 @@ Every choice in computing has a tradeoff. This includes formats, algorithms, enc
 - [What are Multiformats?](#what-are-multiformats)
 - [Multiformat protocols](#multiformat-protocols)
 - [Projects using Multiformats](#projects-using-multiformats)
-- [Contribute & Community](#contribute-community)
+- [Contribute & Community](#contribute--community)
 
 ## What are Multiformats?
 

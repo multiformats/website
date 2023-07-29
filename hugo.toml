@@ -1,11 +1,15 @@
+disableKinds = ['home', 'taxonomy', 'term']
+enableRobotsTXT = true
 languageCode = "en-us"
-relativeURLs = true
-sourceRelativeLinksEval = true
+title = "Multiformats"
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [params]
-  name = "Multiformats"
-  title = "Multiformats"
   description = "A collection of protocols for future-proofing systems, today."
+  specifications = "https://github.com/multiformats/specs"
+  
   author = "Protocol Labs"
   github = "https://github.com/multiformats/multiformats"
-  specifications = "https://github.com/multiformats/specs"
+  name = "Multiformats"
