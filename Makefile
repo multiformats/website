@@ -44,14 +44,14 @@ lint: install
 	$(PREPEND)$(NPMBIN)/lessc --lint layouts/less/*
 
 css: install
-	$(PREPEND)$(NPMBIN)/lessc --clean-css --autoprefix layouts/less/main.less static/css/main.css $(APPEND)
+	$(PREPEND)$(NPMBIN)/lessc --clean-css layouts/less/main.less static/css/main.css $(APPEND)
 
 serve: install lint css
 	$(PREPEND)$(NPMBIN)/hugo server
 
 dev: install css
 	$(PREPEND)( \
-		$(NPMBIN)/nodemon --watch layouts/css --exec "$(NPMBIN)/lessc --clean-css --autoprefix layouts/less/main.less static/css/main.css" & \
+		$(NPMBIN)/nodemon --watch layouts/css --exec "$(NPMBIN)/lessc --clean-css layouts/less/main.less static/css/main.css" & \
 		$(NPMBIN)/hugo server -w \
 	)
 

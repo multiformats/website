@@ -2,6 +2,14 @@
 title = "Multiaddr"
 multiformat = "multiaddr"
 stars = "multiformats/multiaddr"
+
+layout = "abc"
+type = "homea"
+
+[_build]
+  list = 'always'
+  publishResources = true
+  render = 'always'
 +++
 
 ⚠️️ _(Note: this page is a work in progress; [please improve it here](https://github.com/multiformats/website/blob/master/content/multiaddr.md))_ ⚠️️
