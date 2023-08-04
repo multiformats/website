@@ -87,10 +87,10 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 
 ## Contribute & Community
 
-<a href="/">The Multiformats Project</a> is an Open Source software project. It is built by a large community of contributors. Please join us on GitHub or IRC to request features, file bugs, contribute code, improve documentation, and ask questions. We have a very open and welcoming community.
+<a href="/">The Multiformats Project</a> is an Open Source software project. It is built by a large community of contributors. Please join us on GitHub or Matrix to request features, file bugs, contribute code, improve documentation, and ask questions. We have a very open and welcoming community.
 
 - [GitHub Project](https://github.com/multiformats/multiformats)
 - [Website Repository](https://github.com/multiformats/website)
-- IRC Channel: `#ipfs` on irc.freenode.org
+- [Matrix chatroom](https://matrix.to/#/#multiformats:ipfs.io) (`#multiformats:ipfs.io`)
 - [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md)
 - [Contributing Guide](https://github.com/multiformats/multiformats/blob/master/contributing.md)
