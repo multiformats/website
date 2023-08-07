@@ -1,4 +1,5 @@
 +++
+base_url = "../"
 title = "Multiaddr"
 multiformat = "multiaddr"
 stars = "multiformats/multiaddr"
