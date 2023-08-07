@@ -1,4 +1,5 @@
 +++
+base_url = "../"
 title = "Multihash"
 multiformat = "multihash"
 stars = "multiformats/multihash"
