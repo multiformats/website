@@ -63,7 +63,11 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 	<li>
 		<a href="https://ipfs.tech">
 		<img src="projects/ipfs.png" />IPFS</a>
-		- a peer-to-peer hypermedia protocol and distributed file system.
+		- an open system to manage data without a central server.
+	</li>
+	<li>
+		<a href="https://github.com/multiformats/cid"></a>
+		- self-describing content-addressed identifiers for distributed systems.
 	</li>
 	<li>
 		<a href="https://github.com/libp2p/libp2p">
