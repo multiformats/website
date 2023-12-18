@@ -61,7 +61,7 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 
 <ul class="project-list">
 	<li>
-		<a href="https://ipfs.io">
+		<a href="https://ipfs.tech">
 		<img src="projects/ipfs.png" />IPFS</a>
 		- a peer-to-peer hypermedia protocol and distributed file system.
 	</li>
