@@ -66,8 +66,8 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 		- an open system to manage data without a central server.
 	</li>
 	<li>
-		<a href="https://github.com/multiformats/cid"></a>
-		- self-describing content-addressed identifiers for distributed systems.
+		<a href="https://github.com/multiformats/cid">CIDs</a>
+		- a self-describing content-addressed identifier scheme for distributed systems, used to address files in IPFS and systems interoperable with it, as well as in other systems like IPLD, where it is the primary way of expressing links between documents.
 	</li>
 	<li>
 		<a href="https://github.com/libp2p/libp2p">
