@@ -61,9 +61,13 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 
 <ul class="project-list">
 	<li>
-		<a href="https://ipfs.io">
+		<a href="https://ipfs.tech">
 		<img src="projects/ipfs.png" />IPFS</a>
-		- a peer-to-peer hypermedia protocol and distributed file system.
+		- an open system to manage data without a central server.
+	</li>
+	<li>
+		<a href="https://github.com/multiformats/cid">CIDs</a>
+		- a self-describing content-addressed identifier scheme for distributed systems, used to address files in IPFS and systems interoperable with it, as well as in other systems like IPLD, where it is the primary way of expressing links between documents.
 	</li>
 	<li>
 		<a href="https://github.com/libp2p/libp2p">
@@ -74,11 +78,6 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It i
 		<a href="https://github.com/ipld/ipld">
 		<img height="64px" src="https://ipld.io/img/ipld-logo.png" />IPLD</a>
 		- a set of standards and implementations for creating decentralized data-structures that are universally addressable and linkable.
-	</li>
-	<li>
-		<a href="https://github.com/NamChain-Open-Initiative-Research-Lab/NamChain">
-		<img height="64px" src="https://1.bp.blogspot.com/-0SArWfduw68/XkxV8EmBBcI/AAAAAAAAABw/h9aWSWbm0J4kilgn3xddzQ3PdoP-e3RZgCLcBGAsYHQ/s1600/SAVE_20200127_132431.jpg" />நம்Chain</a>
-		- நம்Chain’s mission is to build a socio-blockchain with highly modular, secure and quantum support architecture. 
 	</li>
 	<li>
 		<small><a href="https://github.com/multiformats/website/blob/master/content/index.md">(add yours here)</a></small>
