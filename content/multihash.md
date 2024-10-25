@@ -75,6 +75,7 @@ These implementations are available:
 - rust-multihash
   - [by @dignifiedquire](//github.com/dignifiedquire/rust-multihash)
   - [by @google](//github.com/google/rust-multihash)
+  - [by @cryptidtech](//github.com/cryptidtech/multihash)
 - [haskell-multihash](//github.com/LukeHoersten/multihash)
 - [py-multihash](//github.com/multiformats/py-multihash)
 - [elixir-multihash](//github.com/zabirauf/ex_multihash), [elixir-multihashing](//github.com/candeira/ex_multihashing)
