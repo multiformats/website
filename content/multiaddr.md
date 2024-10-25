@@ -19,33 +19,51 @@ type = "homea"
 
 Multiaddr is a format for encoding addresses from various well-established network protocols. It is useful to write applications that future-proof their use of addresses, and allow multiple transport protocols and addresses to coexist.
 
+
 ## Network Protocol Ossification
 
-The current network addressing scheme in the internet IS NOT self-describing. Addresses of the following forms leave much to interpretation and side-band context. The assumptions they make cause applications to also make those assumptions, which causes lots of "this type of address"-specific code. The network addresses and their protocols rust into place, and cannot be displaced by future protocols because the addressing prevents change.
+The current network addressing scheme on the internet **is not self-describing**. Traditional addresses leave much ambiguity. For example, it's not always clear which transport protocol (TCP, UDP, or others) is being used. This ambiguity forces developers to write application-specific code that assumes a certain protocol, which causes "ossification"—rigid code that cannot easily adapt to future network protocols.
 
-For example, consider:
+### Problematic Examples:
 
-```
-127.0.0.1:9090   # ip4. is this TCP? or UDP? or something else?
-[::1]:3217       # ip6. is this TCP? or UDP? or something else?
-
-http://127.0.0.1/baz.jpg
-http://foo.com/bar/baz.jpg
-//foo.com:1234
- # use DNS, to resolve to either ip4 or ip6, but definitely use
- # tcp after. or maybe quic... >.<
- # these default to TCP port :80.
-```
-
-Instead, when addresses are fully qualified, we can build applications that will work with network protocols of the future, and do not accidentally ossify the stack.
+Consider the following traditional addresses:
 
 ```
-/ip4/127.0.0.1/udp/9090/quic
-/ip6/::1/tcp/3217
-/ip4/127.0.0.1/tcp/80/http/baz.jpg
-/dns4/foo.com/tcp/80/http/bar/baz.jpg
-/dns6/foo.com/tcp/443/https
+127.0.0.1:9090   # IPv4. Is this TCP, UDP, or something else?
+[::1]:3217       # IPv6. Is this TCP, UDP, or something else?
+
+http://127.0.0.1/baz.jpg  # Defaults to TCP port 80, but what if we wanted to use QUIC?
+http://foo.com/bar/baz.jpg  # Uses DNS resolution but defaults to TCP on port 80.
+//foo.com:1234  # Ambiguous—what protocol does this address use after DNS resolution?
 ```
+
+In these cases:
+- `127.0.0.1:9090` could refer to either TCP or UDP, forcing developers to make assumptions.
+- DNS-based addresses (`http://foo.com/bar/baz.jpg`) default to TCP, but there’s no flexibility for newer protocols like QUIC without making breaking changes to the application.
+
+### The Solution: Fully Qualified Addresses with Multiaddr
+
+Multiaddr solves this by providing **self-describing addresses**. Each part of the address specifies both the protocol and the network address, making it clear how to interact with the resource. This approach future-proofs applications, allowing them to adapt to new transport protocols.
+
+#### Fully Qualified Examples with Multiaddr:
+
+```
+/ip4/127.0.0.1/udp/9090/quic       # IPv4 address using UDP on port 9090, with QUIC
+/ip6/::1/tcp/3217                  # IPv6 address using TCP on port 3217
+/ip4/127.0.0.1/tcp/80/http/baz.jpg # IPv4 address using TCP on port 80, accessing an HTTP resource
+/dns4/foo.com/tcp/80/http/bar/baz.jpg # DNS resolution (IPv4) using TCP on port 80, accessing an HTTP resource
+/dns6/foo.com/tcp/443/https        # DNS resolution (IPv6) using TCP on port 443 for HTTPS
+```
+
+In these examples:
+- `/ip4/127.0.0.1/udp/9090/quic` specifies the use of UDP and QUIC, removing ambiguity.
+- `/dns4/foo.com/tcp/80/http/bar/baz.jpg` clearly indicates that the address resolves to IPv4 via DNS and uses TCP to access an HTTP resource.
+
+By explicitly stating the protocol and transport, Multiaddr eliminates the assumptions that lead to network protocol ossification.
+
+---
+
+
 
 ## Multiaddr Format
 
@@ -86,9 +104,6 @@ Binary-packed encoding (psuedo regex)
   example="047f000001060fa0"
   %}}
 
-For Example
-
-(TODO)
 
 ## Implementations
 
@@ -108,11 +123,103 @@ These implementations are available:
 
 ## Examples
 
-TODO
+- **javascript**  
+```javascript
+import { multiaddr } from '@multiformats/multiaddr'
+
+// Example 1: Simple IPv4 and UDP
+const addr1 = multiaddr("/ip4/127.0.0.1/udp/1234")
+// Multiaddr(/ip4/127.0.0.1/udp/1234)
+
+console.log(addr1.bytes)
+// <Uint8Array 04 7f 00 00 01 11 04 d2>
+
+console.log(addr1.toString())
+// '/ip4/127.0.0.1/udp/1234'
+
+console.log(addr1.protos())
+// [
+//   {code: 4, name: 'ip4', size: 32},
+//   {code: 273, name: 'udp', size: 16}
+// ]
+
+console.log(addr1.nodeAddress())
+// {
+//   family: 4,
+//   port: 1234,
+//   address: "127.0.0.1"
+// }
+
+console.log(addr1.encapsulate('/sctp/5678').toString())
+// '/ip4/127.0.0.1/udp/1234/sctp/5678'
+
+
+// Example 2: IPv6 and TCP
+const addr2 = multiaddr("/ip6/::1/tcp/8080")
+// Multiaddr(/ip6/::1/tcp/8080)
+
+console.log(addr2.bytes)
+// <Uint8Array 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1f 90>
+
+console.log(addr2.toString())
+// '/ip6/::1/tcp/8080'
+
+console.log(addr2.protos())
+// [
+//   {code: 41, name: 'ip6', size: 128},
+//   {code: 6, name: 'tcp', size: 16}
+// ]
+
+console.log(addr2.nodeAddress())
+// {
+//   family: 6,
+//   port: 8080,
+//   address: "::1"
+// }
+
+
+// Example 3: DNS and HTTPS
+const addr3 = multiaddr("/dns4/example.com/tcp/443/https")
+// Multiaddr(/dns4/example.com/tcp/443/https)
+
+console.log(addr3.toString())
+// '/dns4/example.com/tcp/443/https'
+
+console.log(addr3.encapsulate('/p2p-circuit').toString())
+// '/dns4/example.com/tcp/443/https/p2p-circuit'
+```
+
+
+- **go**  
+```go
+import ma "github.com/multiformats/go-multiaddr"
+
+// construct from a string (err signals parse failure)
+m1, err := ma.NewMultiaddr("/ip4/127.0.0.1/udp/1234")
+
+// construct from bytes (err signals parse failure)
+m2, err := ma.NewMultiaddrBytes(m1.Bytes())
+
+// true
+strings.Equal(m1.String(), "/ip4/127.0.0.1/udp/1234")
+strings.Equal(m1.String(), m2.String())
+bytes.Equal(m1.Bytes(), m2.Bytes())
+m1.Equal(m2)
+m2.Equal(m1)
+```
+
 
 ## F.A.Q.
 
-TODO
+1. **Why use Multiaddr instead of traditional addressing?**  
+Multiaddr is designed to be future-proof, allowing easy adaptation to new protocols and network designs without breaking legacy applications. It removes ambiguity about what transport protocol or address family is being used.
+
+2. **How does Multiaddr handle new protocols?**  
+The format is extensible. New protocols are simply added to the multicodec table. This allows Multiaddr to support emerging protocols without requiring changes to the core format.
+
+3. **What is the advantage of the binary-packed format?**  
+The binary format is more compact and efficient for storage and transmission, especially useful in low-bandwidth or resource-constrained environments.
+
 
 ## About
 
