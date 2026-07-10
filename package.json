@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "clean-css": "^5.3.2",
-    "hugo-bin": "^0.111.0",
+    "hugo-bin": "^0.149.2",
     "less": "^4.2.0",
     "nodemon": "^3.0.1"
   },
