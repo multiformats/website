@@ -87,7 +87,6 @@ Multiformats is the name for the organization, but it can also be used to refer 
 		<div class="metric-card"><strong>80+</strong><span>organizations</span></div>
 		<div class="metric-card"><strong>30+</strong><span>languages</span></div>
 		<div class="metric-card"><strong>100+</strong><span>implementations</span></div>
-		<div class="metric-card wide"><strong>Thousands</strong><span>of downstream repositories</span></div>
 	</div>
 	<p class="registry-cta"><a class="cta-button" href="https://github.com/multiformats/multicodec/blob/master/table.csv">Register your multicodec</a> <span>Submit a pull request to reserve a code in the public registry.</span></p>
 </div>
@@ -131,30 +130,7 @@ The Multiformats project began through [the IPFS Project](https://ipfs.io). It n
 	</tbody>
 </table>
 
-<ul class="project-list">
-	<li>
-		<a href="https://ipfs.tech">
-		<img src="projects/ipfs.png" />IPFS</a>
-		- an open system to manage data without a central server.
-	</li>
-	<li>
-		<a href="https://github.com/multiformats/cid">CIDs</a>
-		- a self-describing content-addressed identifier scheme for distributed systems, used to address files in IPFS and systems interoperable with it, as well as in other systems like IPLD, where it is the primary way of expressing links between documents.
-	</li>
-	<li>
-		<a href="https://github.com/libp2p/libp2p">
-		<img src="projects/libp2p.png" />libp2p</a>
-		- a modular network library for peer-to-peer protocols.
-	</li>
-	<li>
-		<a href="https://github.com/ipld/ipld">
-		<img height="64px" src="https://ipld.io/img/ipld-logo.png" />IPLD</a>
-		- a set of standards and implementations for creating decentralized data-structures that are universally addressable and linkable.
-	</li>
-	<li>
-		<small><a href="https://github.com/multiformats/multicodec/blob/master/table.csv">Register your multicodec</a> or <a href="https://github.com/multiformats/website/blob/master/content/index.md">add your project here</a>.</small>
-	</li>
-</ul>
+<a href="https://github.com/multiformats/multicodec/blob/master/table.csv">Register your multicodec</a> or <a href="https://github.com/multiformats/website/blob/master/content/index.md">add your project here</a>.
 
 ## Contribute & Community
 
